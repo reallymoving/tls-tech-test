@@ -1,0 +1,27 @@
+server
+{
+    # as we are running unprivileged
+    # we need to bind to a port that
+    # our unpriviled user has access to
+    # moral of the story can't bind to 80
+    listen 8888;
+
+    index index.php index.html;
+
+    root /var/www/quiz/public;
+
+    location /
+    {
+        try_files $uri /index.php?$args;
+    }
+
+    location ~ \.php$
+    {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass 127.0.0.1:9001;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+}
