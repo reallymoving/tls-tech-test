@@ -29,16 +29,14 @@ On successful submission of the final form:
 
 There are a handful of essential requirements for any submission made:
 
-  1. The submitted Laravel project must include the appropriate database migrations to create an empty database of your choosing
-  1. The submitted project must make use of Docker (a ``docker-compose.yml`` file has been supplied for this purpose - [Install Docker Desktop](
-https://www.docker.com/products/docker-desktop/))
+  1. The submitted Laravel project must include the appropriate database migrations
   1. The quiz must start upon visiting the homepage (http://localhost:8001)
-  1. You should name databases, tables etc. appropriately
-  1. You should style pages appropriately
+  1. You should name databases, tables - and style any pages - appropriately
+  1. Submissions should be made either as a GitHub Pull Request, or by means of a link to another GitHub repository
 
 
 ### Important
 
 Provide notes and feedback concerning any aspect of the test that you feel needs feedback or clarification, explaining any design decisions you made.
 
-Ensure your solution can be easily deployed and tested by those reviewing it.
+You may use any version of Laravel you are familiar/comfortable with, and any enabling technologies (such as Docker, or Laravel Sail) if desired. However the solution is provided, ensure it can be deployed and tested easily by those reviewing it.
